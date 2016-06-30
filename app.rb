@@ -18,7 +18,7 @@ post '/room.json' do
   file = File.open("data.json", 'r')
   data = JSON.parse(file.read)
   file.close
-  data['set_temperature'] = JSON.parse(request.env["rack.input"].read)['set_temperature']
+  data.merge!(JSON.parse(request.env["rack.input"].read))
   File.open("data.json", 'w') {|f| f.write(data.to_json) }
   content_type :json
   {result: :ok}.to_json
