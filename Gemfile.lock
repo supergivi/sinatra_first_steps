@@ -1,0 +1,38 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    daemons (1.2.3)
+    eventmachine (1.2.0.1)
+    hiredis (0.6.1)
+    nido (1.0.0)
+    ohm (3.0.3)
+      nido
+      redic (~> 1.5.0)
+      stal
+    rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
+    redic (1.5.0)
+      hiredis
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    stal (0.1.0)
+      redic
+    thin (1.7.0)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
+    tilt (2.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ohm
+  sinatra
+  thin
+
+BUNDLED WITH
+   1.12.5
